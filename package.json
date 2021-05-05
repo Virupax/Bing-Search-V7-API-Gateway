@@ -1,0 +1,30 @@
+{
+  "name": "bing-search-v7-api-gateway",
+  "version": "1.0.0",
+  "description": "Azure's Bing search API V7 is configured in the app to make direct calls to the search API without needing to provisioning azure cloud account. The Request object would be mostly similar to the bing search api documentation, apart from some minor changes to query parameters to ease the overhead of preparing the Request objects.",
+  "main": "server.js",
+  "dependencies": {
+    "axios": "^0.21.1",
+    "cors": "^2.8.5",
+    "express": "^4.17.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "keywords": [
+    "Azure",
+    "Bing",
+    "Search",
+    "API",
+    "V7",
+    "Nodejs",
+    "Express",
+    "Axios",
+    "REST",
+    "SWAGGER"
+  ],
+  "author": "Virupaxgouda Chandrashekar KumbarKattimani",
+  "license": "ISC"
+}
