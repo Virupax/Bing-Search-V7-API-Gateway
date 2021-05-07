@@ -15,7 +15,7 @@ const options = {
         version: '1.0.0',
         description: 'ByPass the setup of Azure Bing Search resource, Connect to Bing search news using three end points for Top, Trending and Search news!'
       },
-      host: 'localhost:3000',
+      host: '104.131.96.211:3000',
       basePath: '/api/v1/'
     },
     // apis: ['./controllers/NewsController.js'],
