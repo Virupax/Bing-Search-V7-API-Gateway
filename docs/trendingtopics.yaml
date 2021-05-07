@@ -1,0 +1,58 @@
+paths:
+ /news/trendingtopics:
+     get:
+       summary: Returns news topics that are currently trending on social networks.
+       produces:
+           - application/json
+       parameters:
+           - in: query
+             name: mkt
+             schema:
+               type: String
+             required: false
+             description: The market where the results come from, must be in the form <language>-<country/region>. For example, en-US. The string is case insensitive.
+           - in: query
+             name: safeSearch
+             schema:
+               type: String
+             required: false
+             description: Used to filter news articles for adult content. The following are the possible values are Off, Moderate, Strict. 
+           - in: query
+             name: since
+             schema:
+               type: integer
+             required: false
+             description: The Unix epoch time (Unix timestamp) that Bing uses to select the trending topics. Bing returns trending topics that it discovered on or after the specified date and time, not the date the topic was published.
+           - in: query
+             name: sortBy
+             schema:
+               type: String
+             required: false
+             description: The order to return news topics in. The following are the possible case-insensitive values, Date and Relevance.
+           - in: query
+             name: textDecorations
+             schema:
+               type: String
+             required: false
+             description: A Boolean value that determines whether display strings in the results should contain decoration markers such as hit highlighting characters. If true, the strings may include markers. The default is false.
+           - in: query
+             name: textFormat
+             schema:
+               type: String
+             required: false
+             description: The type of markers to use for text decorations. The following are the possible values, Raw and HTML.
+       responses:
+           200:
+             description: Returns array of NewsArticles for successful execution.
+           400:
+             description: One of the query parameters is missing or not valid.
+           401:
+             description: The subscription key is missing or is not valid.
+           403:
+             description: The user is authenticated (for example, they used a valid subscription key) but they don’t have permission to the requested resource.
+           410:
+             description: The request used HTTP instead of the HTTPS protocol. HTTPS is the only supported protocol.
+           429:
+             description: The caller exceeded their queries per second quota.
+           500:
+             description:  Unexpected Server Error.

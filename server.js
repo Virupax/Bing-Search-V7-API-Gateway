@@ -1,7 +1,7 @@
 var express = require('express'),
 	app = express(),
 	cors = require('cors'),
-    apiConstants = require('./apiConstants');
+    apiConstants = require('./App Constants/apiConstants');
 	port = process.env.PORT || apiConstants.DEFAULT_PORT,
     newsController = require('./controllers/NewsController');
 
@@ -11,7 +11,7 @@ app.use('/api/v1/', newsController);
 
 //log message
 app.listen(port, function() {
-    console.log('Bing Seearch V7 API gateway app listening on port '+port+ '!');
+    console.log('Bing Search V7 API gateway app listening on port '+port+ '!');
 });
 
 

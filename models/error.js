@@ -10,6 +10,10 @@ class Error{
         this._errorList = errorList;
     }
 
+    setInternalServerError() {
+        this._status = 500;
+        this._message = "Internal Server Error";
+    }
 }
 
 
