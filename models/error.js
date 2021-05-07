@@ -1,8 +1,8 @@
 class Error{
 
-    _status;
-    _message;
-    _errorList;
+    // _status;
+    // _message;
+    // _errorList;
 
     constructor(status, message, errorList){
         this._status = status;
